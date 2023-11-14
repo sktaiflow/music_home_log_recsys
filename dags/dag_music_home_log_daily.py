@@ -35,7 +35,7 @@ with DAG(
     default_args=default_args,
     description="DAG with own plugins",
     schedule="0 9 * * *",
-    start_date=pendulum.datetime(2023, 1, 1, tz=local_tz),
+    start_date=pendulum.datetime(2023, 10, 25, tz=local_tz),
     catchup=True,
     max_active_runs=5,
     tags=["test"],
