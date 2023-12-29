@@ -36,7 +36,7 @@ with DAG(
     description="DAG with own plugins",
     schedule="0 22 * * *",
     start_date=pendulum.datetime(2023, 10, 25, tz=local_tz),
-    catchup=True,
+    catchup=False,
     max_active_runs=5,
     tags=["test"],
     ) as dag:   
