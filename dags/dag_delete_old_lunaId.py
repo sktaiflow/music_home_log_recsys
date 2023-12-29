@@ -31,13 +31,13 @@ default_args = {
 yesterday = (datetime.today() - timedelta(days=1)).strftime('%Y%m%d')
 
 with DAG(
-    "delete_old_lunaId",
+    "delete_old_lunaId_daily",
     default_args=default_args,
     description="DAG with own plugins",
     schedule="0 22 * * *",
-    start_date=pendulum.datetime(2023, 10, 25, tz=local_tz),
+    start_date=pendulum.datetime(2023, 12, 25, tz=local_tz),
     catchup=False,
-    max_active_runs=5,
+    max_active_runs=1,
     tags=["test"],
     ) as dag:   
     
